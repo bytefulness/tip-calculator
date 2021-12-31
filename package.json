@@ -1,0 +1,14 @@
+{
+  "name": "tip-calculator",
+  "version": "1.0.0",
+  "description": "Tip calculator",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass --watch scss:assets/css"
+  },
+  "author": "Erhan Akyel",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.45.2"
+  }
+}
