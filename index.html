@@ -9,6 +9,74 @@
     <title>Tip Calculator</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
+    <main>
+      <section class="app-greeting">
+        <h1 class="app-title">Tip Calculator</h1>
+        <p>
+          Calculate tip rate for your flavour meals and share total between your
+          friends.
+        </p>
+      </section>
+
+      <section class="calculator">
+        <!-- Calculator Input Part -->
+        <div class="calculator__input">
+          <!-- Bill Input  -->
+          <div class="bill">
+            <label for="bill">
+              <h2 class="bill__title">bill</h2>
+              <span class="bill__currency">$</span>
+              <input class="input" type="number" id="bill" placeholder="0.00" />
+            </label>
+          </div>
+
+          <!-- Tip Amount -->
+          <div class="tip">
+            <h2 class="tip__title">select tip %</h2>
+            <div class="tip__amount-wrapper">
+              <button class="tip__amount">5%</button>
+              <button class="tip__amount">10%</button>
+              <button class="tip__amount active">15%</button>
+              <button class="tip__amount">25%</button>
+              <button class="tip__amount">50%</button>
+              <input type="number" placeholder="Custom" />
+            </div>
+          </div>
+
+          <!-- Number Of People Input -->
+          <div class="people">
+            <label for="people">
+              <h2 class="people__title">number of people</h2>
+              <span class="people__icon">X</span>
+              <input class="input" type="number" id="people" value="1" />
+            </label>
+          </div>
+        </div>
+
+        <!-- Calculator Result Part -->
+        <div class="calculator__result">
+          <div class="result">
+            <div>
+              <h3 class="result__label">Tip Amount</h3>
+              <span class="label-exp">/ person</span>
+            </div>
+            <div>
+              <span class="result__text">$41.27</span>
+            </div>
+          </div>
+
+          <div class="result">
+            <div>
+              <h3 class="result__label">Total</h3>
+              <span class="label-exp">/ person</span>
+            </div>
+            <div>
+              <span class="result__text">$4.27</span>
+            </div>
+          </div>
+          <button class="reset">Reset</button>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
