@@ -26,7 +26,13 @@
             <label for="bill">
               <h2 class="bill__title">bill</h2>
               <span class="bill__currency">$</span>
-              <input class="input" type="number" id="bill" placeholder="0.00" />
+              <input
+                class="input"
+                type="number"
+                id="bill"
+                placeholder="0.00"
+                value="100"
+              />
             </label>
           </div>
 
@@ -34,12 +40,12 @@
           <div class="tip">
             <h2 class="tip__title">select tip %</h2>
             <div class="tip__amount-wrapper">
-              <button class="tip__amount">5%</button>
-              <button class="tip__amount">10%</button>
-              <button class="tip__amount active">15%</button>
-              <button class="tip__amount">25%</button>
-              <button class="tip__amount">50%</button>
-              <input type="number" placeholder="Custom" />
+              <button class="tip__amount" data-tip-rate="5">5%</button>
+              <button class="tip__amount" data-tip-rate="10">10%</button>
+              <button class="tip__amount active" data-tip-rate="15">15%</button>
+              <button class="tip__amount" data-tip-rate="25">25%</button>
+              <button class="tip__amount" data-tip-rate="50">50%</button>
+              <input type="number" id="custom-tip" placeholder="Custom" />
             </div>
           </div>
 
@@ -48,7 +54,13 @@
             <label for="people">
               <h2 class="people__title">number of people</h2>
               <span class="people__icon">X</span>
-              <input class="input" type="number" id="people" value="1" />
+              <input
+                class="input"
+                type="number"
+                id="people"
+                min="1"
+                value="2"
+              />
             </label>
           </div>
         </div>
@@ -61,7 +73,7 @@
               <span class="label-exp">/ person</span>
             </div>
             <div>
-              <span class="result__text">$41.27</span>
+              <span class="result__text" id="result-tip">$41.27</span>
             </div>
           </div>
 
@@ -71,7 +83,7 @@
               <span class="label-exp">/ person</span>
             </div>
             <div>
-              <span class="result__text">$4.27</span>
+              <span class="result__text" id="result-total-person">$4.27</span>
             </div>
           </div>
           <button class="reset">Reset</button>
