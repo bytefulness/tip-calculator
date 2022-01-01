@@ -1,0 +1,30 @@
+$brekpoints: (
+  "for-tablet-up": "600px",
+  "for-laptop-up": "900px",
+  "for-desktop-up": "1200px",
+  "for-large-desktop-up": "1400px",
+);
+
+@mixin for-tablet-up {
+  @media (min-width: map-get($brekpoints, "for-tablet-up")) {
+    @content;
+  }
+}
+
+@mixin for-laptop-up {
+  @media (min-width: map-get($brekpoints, "for-laptop-up")) {
+    @content;
+  }
+}
+
+@mixin for-desktop-up {
+  @media (min-width: map-get($brekpoints, "for-desktop-up")) {
+    @content;
+  }
+}
+
+@mixin for-large-desktop-up {
+  @media (min-width: map-get($brekpoints, "for-large-desktop-up")) {
+    @content;
+  }
+}

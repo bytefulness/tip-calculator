@@ -1,4 +1,5 @@
 @use "variables" as *;
+@use "mixins" as *;
 
 .app-greeting {
   padding: 5rem 1rem;
@@ -7,23 +8,41 @@
   h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+
+    @include for-laptop-up {
+      margin-bottom: 2rem;
+      font-size: 3rem;
+    }
   }
 
   p {
     font-size: 1rem;
     line-height: 1.5;
+    width: 80%;
+    margin-inline: auto;
+
+    @include for-laptop-up {
+      font-size: 1.125rem;
+    }
   }
 }
 
 // || Calculator Section
 .calculator {
-  width: min(100%, 700px);
-  height: 100%;
   margin-inline: auto;
   padding: 1rem;
   background-color: #fff;
   border-radius: 3rem 3rem 0 0;
   padding: 3rem 1.5rem;
+  display: grid;
+
+  @include for-laptop-up {
+    width: min(95%, 1000px);
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5rem;
+    border-radius: 3rem;
+    padding: 4rem 3rem;
+  }
 
   .bill,
   .tip,
@@ -75,6 +94,10 @@
         grid-auto-rows: 3rem;
         gap: 1rem;
 
+        @include for-tablet-up {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
         // Tip amount buttons
         .tip__amount {
           background-color: $color-primary;
@@ -124,6 +147,11 @@
     padding: 2rem;
     border-radius: 1rem;
     color: #fff;
+    position: relative;
+
+    @include for-laptop-up {
+      padding: 4rem 2rem;
+    }
 
     // result group
     .result {
@@ -135,10 +163,18 @@
         font-size: 1rem;
         letter-spacing: 1px;
         margin-bottom: 0.25rem;
+
+        @include for-laptop-up {
+          font-size: 1.5rem;
+        }
       }
 
       .label-exp {
         color: $background;
+
+        @include for-laptop-up {
+          font-size: 1.125rem;
+        }
       }
 
       &__text {
@@ -149,7 +185,6 @@
     }
 
     .reset {
-      display: inline-block;
       width: 100%;
       padding: 1rem;
       border-radius: 0.5rem;
@@ -158,6 +193,12 @@
       font-size: 1.25rem;
       letter-spacing: 1px;
       font-weight: 600;
+
+      @include for-laptop-up {
+        position: absolute;
+        bottom: 3rem;
+        width: 85%;
+      }
     }
   }
 }

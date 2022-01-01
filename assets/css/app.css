@@ -47,6 +47,11 @@ h2 {
   text-transform: capitalize;
   margin-bottom: 0.5rem;
 }
+@media (min-width: 900px) {
+  h2 {
+    font-size: 1.25rem;
+  }
+}
 
 .app-greeting {
   padding: 5rem 1rem;
@@ -56,19 +61,40 @@ h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
+@media (min-width: 900px) {
+  .app-greeting h1 {
+    margin-bottom: 2rem;
+    font-size: 3rem;
+  }
+}
 .app-greeting p {
   font-size: 1rem;
   line-height: 1.5;
+  width: 80%;
+  margin-inline: auto;
+}
+@media (min-width: 900px) {
+  .app-greeting p {
+    font-size: 1.125rem;
+  }
 }
 
 .calculator {
-  width: min(100%, 700px);
-  height: 100%;
   margin-inline: auto;
   padding: 1rem;
   background-color: #fff;
   border-radius: 3rem 3rem 0 0;
   padding: 3rem 1.5rem;
+  display: grid;
+}
+@media (min-width: 900px) {
+  .calculator {
+    width: min(95%, 1000px);
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5rem;
+    border-radius: 3rem;
+    padding: 4rem 3rem;
+  }
 }
 .calculator .bill,
 .calculator .tip,
@@ -107,6 +133,11 @@ h2 {
   grid-auto-rows: 3rem;
   gap: 1rem;
 }
+@media (min-width: 600px) {
+  .calculator__input .tip__amount-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 .calculator__input .tip__amount-wrapper .tip__amount {
   background-color: #00494d;
   color: #fff;
@@ -137,6 +168,12 @@ h2 {
   padding: 2rem;
   border-radius: 1rem;
   color: #fff;
+  position: relative;
+}
+@media (min-width: 900px) {
+  .calculator__result {
+    padding: 4rem 2rem;
+  }
 }
 .calculator__result .result {
   display: flex;
@@ -148,8 +185,18 @@ h2 {
   letter-spacing: 1px;
   margin-bottom: 0.25rem;
 }
+@media (min-width: 900px) {
+  .calculator__result .result__label {
+    font-size: 1.5rem;
+  }
+}
 .calculator__result .result .label-exp {
   color: #c4e4e7;
+}
+@media (min-width: 900px) {
+  .calculator__result .result .label-exp {
+    font-size: 1.125rem;
+  }
 }
 .calculator__result .result__text {
   font-size: 2rem;
@@ -157,7 +204,6 @@ h2 {
   color: #26c0ab;
 }
 .calculator__result .reset {
-  display: inline-block;
   width: 100%;
   padding: 1rem;
   border-radius: 0.5rem;
@@ -166,6 +212,13 @@ h2 {
   font-size: 1.25rem;
   letter-spacing: 1px;
   font-weight: 600;
+}
+@media (min-width: 900px) {
+  .calculator__result .reset {
+    position: absolute;
+    bottom: 3rem;
+    width: 85%;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */
